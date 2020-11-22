@@ -1,5 +1,4 @@
 import React from "react";
-import { AppButton } from "components/atoms";
 import { HomeBanner } from "components/organisms";
 import CustomThemeProvider from "theme";
 
@@ -10,7 +9,6 @@ function App() {
     <div className="App">
       <CustomThemeProvider>
         <HomeBanner />
-        <AppButton>123</AppButton>
       </CustomThemeProvider>
     </div>
   );
