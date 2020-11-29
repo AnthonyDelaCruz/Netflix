@@ -2,7 +2,7 @@ import React from "react";
 import { HomeBanner } from "components/organisms";
 import CustomThemeProvider from "theme";
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (

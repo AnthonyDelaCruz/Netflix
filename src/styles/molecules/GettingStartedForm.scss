@@ -1,0 +1,11 @@
+.getting-started-form {
+  display: flex;
+  .MuiFormControl-root {
+    min-width: 450px;
+  }
+  .MuiButtonBase-root {
+    height: 60px;
+    font-size: 1.3rem;
+    border-radius: 0;
+  }
+}

@@ -1,7 +1,8 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 
-import { AppInput, AppText, AppButton } from "components/atoms";
+import { AppText } from "components/atoms";
+import { GettingStartedForm } from 'components/molecules'
 
 const Banner: React.FC = () => {
   return (
@@ -50,8 +51,7 @@ const Banner: React.FC = () => {
                 Ready to watch? Enter your email to create or restart your
                 membership.
               </AppText>
-              <AppInput label="Email address" />
-              <AppButton>GET STARTED</AppButton>
+              <GettingStartedForm />
             </div>
           </div>
         </Grid>
