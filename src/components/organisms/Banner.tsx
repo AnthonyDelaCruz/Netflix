@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 
 import { AppText } from "components/atoms";
-import { GettingStartedForm } from "components/molecules";
+import { GettingStartedForm, Navbar } from "components/molecules";
 
 import "styles/organisms/Banner.scss";
 
@@ -16,7 +16,7 @@ const Banner: React.FC = () => {
     >
       <Grid container>
         <Grid item xs={12}>
-          <AppText variant="h1">Thousands of TV shoes & movies.</AppText>
+          <Navbar />
         </Grid>
         <Grid className="banner-content" item xs={12}>
           <div className="banner-content-container">

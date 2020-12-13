@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 type Props = {
   children: any;
+  endIcon?: React.ReactNode;
 };
 
 const useStyles = makeStyles({
@@ -19,10 +20,10 @@ const useStyles = makeStyles({
   },
 });
 
-const AppButton: React.FC<Props> = ({ children }) => {
+const AppButton: React.FC<Props> = ({ children, endIcon = null }) => {
   const buttonStyles = useStyles();
   return (
-    <Button variant="contained" className={buttonStyles.root}>
+    <Button variant="contained" className={buttonStyles.root} endIcon={endIcon}>
       <span className={buttonStyles.text}>{children}</span>
     </Button>
   );

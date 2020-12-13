@@ -1,15 +1,17 @@
-import React, { FC } from 'react'
+import React, { FC } from "react";
+import ChevronRight from "@material-ui/icons/ChevronRight";
 
-import { AppInput, AppButton } from 'components/atoms'
-import 'styles/molecules/GettingStartedForm.scss'
+import { AppInput, AppButton } from "components/atoms";
+
+import "styles/molecules/GettingStartedForm.scss";
 
 const GettingStartedForm: FC = () => {
   return (
-    <div className='getting-started-form'>
+    <div className="getting-started-form">
       <AppInput label="Email address" />
-      <AppButton>GET STARTED</AppButton>
+      <AppButton endIcon={<ChevronRight />}>GET STARTED</AppButton>
     </div>
-  )
-}
+  );
+};
 
-export default GettingStartedForm
+export default GettingStartedForm;
