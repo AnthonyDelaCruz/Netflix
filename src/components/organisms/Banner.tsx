@@ -31,12 +31,6 @@ const Banner: React.FC = () => {
                   </AppText>
                 </div>
               </div>
-              <div className="banner-content-spacing--sm-text">
-                <AppText>
-                  Ready to watch? Enter your email to create or restart your
-                  membership.
-                </AppText>
-              </div>
               <GettingStartedForm />
             </>
           </div>

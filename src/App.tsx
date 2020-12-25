@@ -1,5 +1,5 @@
 import React from "react";
-import { HomeBanner, PanelContainer } from "components/organisms";
+import { HomeBanner, PanelContainer, Faq } from "components/organisms";
 import CustomThemeProvider from "theme";
 
 import "./App.scss";
@@ -10,6 +10,7 @@ function App() {
       <CustomThemeProvider>
         <HomeBanner />
         <PanelContainer />
+        <Faq />
       </CustomThemeProvider>
     </div>
   );

@@ -1,6 +1,8 @@
 .getting-started-form {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+
   .MuiFormControl-root {
     min-width: 450px;
   }
@@ -13,5 +15,11 @@
       font-size: 1.625rem;
       color: #ffffff;
     }
+  }
+  .text--sm {
+    margin: 20px 0 10px;
+  }
+  .form-container {
+    display: flex;
   }
 }
