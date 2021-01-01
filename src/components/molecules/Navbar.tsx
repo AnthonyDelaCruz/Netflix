@@ -13,6 +13,7 @@ const useStyles = makeStyles({
     flexDirection: "row",
     justifyContent: "space-between",
     padding: "20px 3rem 0px",
+    boxShadow: "none",
   },
   logo: {
     height: "32px",
@@ -23,7 +24,7 @@ const useStyles = makeStyles({
 const Navbar: React.FC = () => {
   const styles = useStyles();
   return (
-    <AppBar className={styles.root}>
+    <AppBar className={styles.root} position="static">
       <AppImage
         src="/images/logo.png"
         alt="netflix logo"

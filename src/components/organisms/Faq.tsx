@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import { AppText } from "components/atoms";
 import { GettingStartedForm } from "components/molecules";
+import Accordion from "./Accordion";
 
 const useStyles = makeStyles({
   faqContainer: {
@@ -21,6 +22,7 @@ const Faq: React.FC = () => {
   return (
     <div className={styles.faqContainer}>
       <AppText variant="h1">Frequently Asked Questions</AppText>
+      <Accordion />
       <GettingStartedForm />
     </div>
   );
