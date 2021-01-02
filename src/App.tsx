@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "components/molecules";
 import { HomeBanner, PanelContainer, Faq } from "components/organisms";
 import CustomThemeProvider from "theme";
 
@@ -11,6 +12,7 @@ function App() {
         <HomeBanner />
         <PanelContainer />
         <Faq />
+        <Footer />
       </CustomThemeProvider>
     </div>
   );
