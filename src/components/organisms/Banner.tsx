@@ -1,12 +1,22 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
+import { makeStyles } from "@material-ui/core/styles";
 
 import { AppText } from "components/atoms";
 import { GettingStartedForm, Navbar } from "components/molecules";
 
 import "styles/organisms/Banner.scss";
 
+const useStyles = makeStyles((theme) => ({
+  navBarContainer: {
+    [theme.breakpoints.down("md")]: {
+      margin: "0 5%",
+    },
+  },
+}));
+
 const Banner: React.FC = () => {
+  const styles = useStyles();
   return (
     <div
       className="banner"
@@ -15,7 +25,7 @@ const Banner: React.FC = () => {
       }}
     >
       <Grid container>
-        <Grid item xs={12}>
+        <Grid item xs={12} className={styles.navBarContainer}>
           <Navbar />
         </Grid>
         <Grid className="banner-content" item xs={12}>

@@ -6,7 +6,7 @@ import { AppButton, AppImage } from "components/atoms";
 
 import "styles/molecules/Navbar.scss";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     background: "transparent",
     display: "flex",
@@ -14,12 +14,27 @@ const useStyles = makeStyles({
     justifyContent: "space-between",
     padding: "20px 3rem 0px",
     boxShadow: "none",
+    [theme.breakpoints.down("sm")]: {
+      padding: 0,
+      paddingTop: "20px",
+      margin: 0,
+      alignItems: "center",
+    },
   },
   logo: {
     height: "32px",
     width: "100px",
+    [theme.breakpoints.down("sm")]: {
+      height: "24px",
+      width: "auto",
+    },
   },
-});
+  signInButton: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: ".9rem",
+    },
+  },
+}));
 
 const Navbar: React.FC = () => {
   const styles = useStyles();
@@ -30,7 +45,7 @@ const Navbar: React.FC = () => {
         alt="netflix logo"
         className={styles.logo}
       />
-      <AppButton>Sign In</AppButton>
+      <AppButton customStyle={styles.signInButton}>Sign In</AppButton>
     </AppBar>
   );
 };
