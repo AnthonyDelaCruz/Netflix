@@ -19,8 +19,15 @@
     .banner-content-spacing--md-text {
       margin: 20px 0 30px;
     }
-
-    @media screen and (max-width: 960px) {
+  }
+  @media screen and (max-width: 960px) {
+    h1 {
+      font-size: 1.75rem;
+    }
+    h2 {
+      font-size: 1.125rem;
+    }
+    .banner-content-container {
       padding: 50px 5%;
     }
   }

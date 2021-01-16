@@ -42,6 +42,9 @@ const useStyles = makeStyles((theme) => {
     },
     text: {
       margin: "20px 0 10px",
+      [isSmallDevices]: {
+        margin: "0 0 10px",
+      },
     },
     icon: {
       fontSize: "1.625rem",
