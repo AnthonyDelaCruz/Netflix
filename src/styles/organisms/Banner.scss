@@ -19,5 +19,9 @@
     .banner-content-spacing--md-text {
       margin: 20px 0 30px;
     }
+
+    @media screen and (max-width: 960px) {
+      padding: 50px 5%;
+    }
   }
 }

@@ -3,6 +3,8 @@ import TextField, { TextFieldProps } from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 import cn from "classnames";
 
+type Props = TextFieldProps & { customStyle?: any };
+
 const useStyles = makeStyles({
   root: {
     background: "#ffffff",
@@ -16,10 +18,14 @@ const useStyles = makeStyles({
   },
 });
 
-const AppInput: React.FC<TextFieldProps> = ({ ...props }) => {
+const AppInput: React.FC<Props> = ({ ...props }) => {
   const styles = useStyles();
   return (
-    <TextField variant="outlined" className={cn(styles.root)} {...props} />
+    <TextField
+      variant="outlined"
+      className={cn(styles.root, props.customStyle)}
+      {...props}
+    />
   );
 };
 
