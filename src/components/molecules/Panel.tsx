@@ -14,38 +14,53 @@ type Props = {
   reverse?: boolean;
 };
 
-const useStyles = makeStyles({
-  root: {
-    borderBottom: "8px solid #222",
-    "&:first-of-type": {
-      borderTop: "8px solid #222",
+const useStyles = makeStyles((theme) => {
+  const isSmallDevices = theme.breakpoints.down("md");
+  return {
+    root: {
+      borderBottom: "8px solid #222",
+      "&:first-of-type": {
+        borderTop: "8px solid #222",
+      },
     },
-  },
-  panel: {
-    margin: "0 auto",
-    padding: "70px 45px",
-    maxWidth: "1100px",
-  },
-  contentLeft: {
-    paddingRight: "3rem",
-    justifyContent: "center",
-  },
-  contentRight: {
-    paddingLeft: "3rem",
-  },
-  imageLeft: {
-    justifyContent: "unset",
-  },
-  imageRight: {
-    justifyContent: "center",
-  },
-  panelImage: {
-    height: "auto",
-    maxWidth: "100%",
-  },
-  reverseContent: {
-    flexDirection: "row-reverse",
-  },
+    panel: {
+      margin: "0 auto",
+      padding: "70px 45px",
+      maxWidth: "1100px",
+      [isSmallDevices]: {
+        padding: "50px 5%",
+      },
+    },
+    contentLeft: {
+      paddingRight: "3rem",
+      justifyContent: "center",
+      [isSmallDevices]: {
+        padding: 0,
+      },
+    },
+    contentRight: {
+      paddingLeft: "3rem",
+      [isSmallDevices]: {
+        padding: 0,
+      },
+    },
+    imageLeft: {
+      justifyContent: "unset",
+      [isSmallDevices]: {
+        justifyContent: "center",
+      },
+    },
+    imageRight: {
+      justifyContent: "center",
+    },
+    panelImage: {
+      height: "auto",
+      maxWidth: "100%",
+    },
+    reverseContent: {
+      flexDirection: "row-reverse",
+    },
+  };
 });
 
 const Panel: React.FC<Props> = ({
