@@ -15,38 +15,50 @@ type Props = {
   id: string;
 };
 
-const useStyles = makeStyles({
-  root: {
-    backgroundColor: "#303030",
-    marginBottom: "8px",
-    "&.Mui-expanded": {
-      margin: "8px 0",
+const useStyles = makeStyles((theme) => {
+  const isSmallDevices = theme.breakpoints.down("md");
+  return {
+    root: {
+      backgroundColor: "#303030",
+      marginBottom: "8px",
+      "&.Mui-expanded": {
+        margin: "8px 0",
+      },
     },
-  },
-  icon: {
-    color: "#ffffff",
-    fontSize: "2.5rem",
-    fontWeight: 400,
-  },
-  accordionText: {
-    fontSize: "1.625rem",
-  },
-  accordionContent: {
-    textAlign: "left",
-  },
-  expanded: (props: { isOpen: boolean }) => ({
-    padding: ".8em 2.2em",
-    "& div:nth-child(2)": {
-      transform: props.isOpen ? "rotate(45deg)" : "rotate(0deg)",
+    icon: {
+      color: "#ffffff",
+      fontSize: "2.5rem",
+      fontWeight: 400,
+      [isSmallDevices]: {
+        fontSize: "1.625rem",
+      },
     },
-  }),
-  detailsContainer: {
-    border: "1px solid red",
-  },
-  divider: {
-    border: "1px solid #000000",
-    margin: 0,
-  },
+    accordionText: {
+      fontSize: "1.625rem",
+      [isSmallDevices]: {
+        fontSize: "1.125rem",
+      },
+    },
+    accordionContent: {
+      textAlign: "left",
+    },
+    expanded: (props: { isOpen: boolean }) => ({
+      padding: ".8em 2.2em",
+      "& div:nth-child(2)": {
+        transform: props.isOpen ? "rotate(45deg)" : "rotate(0deg)",
+      },
+      [isSmallDevices]: {
+        padding: "0 2.2em",
+      },
+    }),
+    detailsContainer: {
+      border: "1px solid red",
+    },
+    divider: {
+      border: "1px solid #000000",
+      margin: 0,
+    },
+  };
 });
 
 const useAccordionDetailsStyles = makeStyles({

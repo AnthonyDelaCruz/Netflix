@@ -5,12 +5,16 @@ import { AccordionItem } from "components/molecules";
 
 import faqs from "constants/faqs.json";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   container: {
     width: "75%",
     margin: "2em auto",
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      margin: "1.25em auto",
+    },
   },
-});
+}));
 
 const AccordionContainer = () => {
   const styles = useStyles();
